@@ -22,9 +22,26 @@ class InsumoController extends Controller
 
     public function index()
     {
-        //alert()->success('Success Message','Title');
+        //Ya sirve este pedo pero soy muy mamador como para dejarlo así
+        //bueno quizá por esta vez simón ;v
         $insumos = Insumo::where('estado', '=', 'PENDIENTE')->orderBy('id', 'ASC')->paginate();
-        return view('home', compact('insumos'));
+        $disponibles = Insumo::where('estado', '=', 'DISPONIBLE')->orderBy('id', 'ASC')->paginate();
+
+        /**
+         * // Segunda opción, solo se hace una consulta 
+        * $insumos = Insumo::orderBy('id', 'ASC')->paginate();
+        * // pero pierde las propiedades de ser modelo(Insumo y pasa a ser un objeto tipo Insumo) 
+        * $disponibles=array();
+        * $pendientes=array();
+        * foreach ($insumos as $insumo)
+        * {
+        *     if($insumo->estado == 'DISPONIBLE')
+        *         array_push($disponibles, $insumo);
+        *     else if($insumo->estado == 'PENDIENTE')
+        *         array_push($pendientes, $insumo);
+        * }
+        * $insumos = $pendientes; */
+        return view('home', compact(['insumos', 'disponibles']));
     }
 
     public function create()

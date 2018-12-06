@@ -45,7 +45,7 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                @foreach($insumos as $insumo)
+                                                @foreach($disponibles as $insumo)
                                                     <tr>
                                                         <td>{{ $insumo->id }}</td>
                                                         <td>{{ $insumo->nombre }}</td>
@@ -56,7 +56,7 @@
                                                 @endforeach
                                             </tbody>
                                         </table>
-                                        {!! $insumos->render(); !!}
+                                        {!! $disponibles->render(); !!}
                                     </div>
                                 </div>
                             </div>
