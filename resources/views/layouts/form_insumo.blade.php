@@ -32,6 +32,13 @@
             <!--label>Coste de venta</label>
             <input name="coste_out" type="number" class="form-control price"  required-->
         </div>
+        <div class="form-group">
+            {!! Form::label('estado', 'Estado') !!}
+            {!! Form::select('estado', array('PENDIENTE' => 'Pendiente', 'DISPONIBLE' => 'Disponible'), null, 
+            ['class'=> 'form-control', 'required'=>'required']) !!}
+            <!--label>Coste de producción</label>
+            <input type="number" name="coste_in" class="form-control price"  required-->
+        </div>
         {!! Form::button('<i class="fa fa-check-circle"></i> ACEPTAR', ['type'=>'submit', 'class' => 'btn btn-primary']) !!}
         <!--button type="submit" class="btn btn-primary"><i class="fa fa-check-circle"></i> Save changes</button-->
     </form>
