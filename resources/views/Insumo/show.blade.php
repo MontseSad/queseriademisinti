@@ -54,34 +54,33 @@
                                                         {!! Form::label('estado', 'Estado') !!}
                                                         {!! Form::label($insumo->estado, null, ['class'=> 'form-control', 'required'=>'required'], array('disabled')) !!}
                                                     </div>
-                                                    <div>
+                                                    <div id="botonesDiv">
+                                                        <div id="botonEditar" style="float: left">
                                                         <a href="{{ route('insumos.edit', $insumo->id) }}" class="btn btn-default btn-lg"><i></i> Editar</a>
+                                                        </div>
+                                                        <div id="botonEliminar" style="float: left">
                                                         <form id="delete-f" action="{{ route('insumos.destroy', $insumo->id) }}" method="POST" onsubmit="">
                                                             {{ csrf_field() }}
                                                             <input type="hidden" name="_method" value="DELETE">
                                                             <div class="right">
-                                                                <button id="btn-del" type="submit" class="btn btn-danger"><i class="fa fa-check-circle"></i> Eliminar</button>
+                                                                <button id="btn-del" style="margin-left: 10px" type="submit" class="btn btn-danger"><i class="fa fa-check-circle"></i> Eliminar</button>
                                                             </div>
                                                         </form>
-                                                        <!--input type="hidden" name="_method" value="DELETE"-->
-                                                        <!--button style="margin-left: 10px" onclick="showsweet()" type="submit" class="btn btn-danger btn-lg" ><i></i> Eliminar</button-->
+                                                        </div>
+                                                        <div id="botonArchivar" style="float: left">
                                                         <button style="margin-left: 10px" type="submit" class="btn btn-warning btn-lg"><i></i> Archivar</button>
+                                                        </div>
                                                     </div>
                                                     <script>
-                                                        /* por defecto al submit de eliminar */
                                                         $('#btn-del').on('click', function(e){
-                                                            /*no se que sea esto pero a poco no se ve bien
-                                                            chingon, a parte si lo quitas ya no funciona ;v v;*/
                                                             e.preventDefault();
-                                                            /*alert mamador*/
                                                             swal({   
                                                                 title: "Are you sure?",
-                                                                text: "You will not be able to recover this lorem ipsum!",         type: "warning",   
+                                                                text: "You will not be able to recover this lorem ipsum!",         
+                                                                type: "warning",   
                                                                 showCancelButton: true,   
                                                                 confirmButtonColor: "#DD6B55",
                                                                 confirmButtonText: "Simón"
-                                                                /*sin then no funciona porque saber que 
-                                                                puto lenguaje de mierda es este alaverga*/
                                                             }).then( function (result) {
                                                                 if(result.value) {
                                                                     $("#delete-f").submit();
@@ -91,14 +90,6 @@
                                                                 }
                                                             });
                                                         })
-                                                        /* al parecer esto no es necesario
-                                                        function showsweet() {
-                                                            const swalWithBootstrapButtons = swal.mixin({
-                                                            confirmButtonClass: 'btn btn-success',
-                                                            cancelButtonClass: 'btn btn-danger',
-                                                            buttonsStyling: false,
-                                                            });
-                                                        }*/
                                                     </script>
                                             </form>
                                         </div>
