@@ -23,7 +23,7 @@ class InsumoController extends Controller
     public function index()
     {
         //alert()->success('Success Message','Title');
-        $insumos = Insumo::orderBy('id', 'ASC')->paginate();
+        $insumos = Insumo::where('estado', '=', 'PENDIENTE')->orderBy('id', 'ASC')->paginate();
         return view('home', compact('insumos'));
     }
 
@@ -62,6 +62,7 @@ class InsumoController extends Controller
         $insumo->cantidad = $request->cantidad;
         $insumo->precio_t = $request->precio_t;
         $insumo->precio_u = $request->precio_u;
+        $insumo->estado = $request->estado;
 
         $insumo->save();
 
