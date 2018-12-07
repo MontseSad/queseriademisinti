@@ -58,6 +58,7 @@ class InsumoController extends Controller
         $insumo->cantidad = $request->cantidad;
         $insumo->precio_t = $request->precio_t;
         $insumo->precio_u = $request->precio_u;
+        $insumo->estado = $request->estado;
 
         $insumo->save();
 
