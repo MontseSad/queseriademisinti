@@ -104,23 +104,24 @@
                 <nav id="left-sidebar-nav" class="sidebar-nav">
                     <ul id="main-menu" class="metismenu">
                         <li class="active"><a href="/home"><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
-                        <li class=""><a href="insumos/create"><i class="lnr lnr-cart"></i> <span>Nuevo insumo</span></a></li>
+                        <li class=""><a href="{{ route('insumos.create') }}"><i class="lnr lnr-cart"></i> <span>Nuevo insumo</span></a></li>
                         <li class="">
                                 <a href="#subPages" class="has-arrow" aria-expanded="false"><i class="lnr lnr-layers"></i> <span>Productos</span></a>
                                 <ul aria-expanded="true">
-                                    <li class=""><a href="/lotes">Producción por lotes</a></li>
-                                    <li class=""><a href="/productos">Productos específicos</a></li>
+                                    <li class=""><a href="#/lotes">Producción por lotes</a></li>
+                                    <li class=""><a href="{{ route('productos.index') }}">Productos específicos</a></li>
+                                    <li class=""><a href="{{ route('productos.create') }}">Añadir producto a preparar</a></li>
                                 </ul>
                             </li>
                         <li class="">
                             <a href="#subPages" class="has-arrow" aria-expanded="false"><i class="lnr lnr-user"></i> <span>Usuarios</span></a>
                             <ul aria-expanded="true">
                                 <li class=""><a href="{{ route('list.queseros') }}">Queseros</a></li>
-                                <li class=""><a href="#/addEmployee">Nuevo Usuario</a></li>
+                                <li class=""><a href="{{ route('queseros.create') }}">Nuevo Quesero</a></li>
                             </ul>
                         </li>
-                        <li><a href="/ventas" aria-expanded="false"><i class="lnr lnr-diamond"></i> <span>Ventas</span></a></li>
-                        <li><a href="/compras" aria-expanded="false"><i class="lnr lnr-list"></i> <span>Compras</span></a></li>
+                        <!--li><a href="#/ventas" aria-expanded="false"><i class="lnr lnr-diamond"></i> <span>Ventas</span></a></li>
+                        <li><a href="#/compras" aria-expanded="false"><i class="lnr lnr-list"></i> <span>Compras</span></a></li>
                         <li><a href="#uiElements" aria-expanded="false"><i class="lnr lnr-spell-check"></i> <span>Surtimiento
                                     de</span></a></li>
                         <li class="">
@@ -133,13 +134,13 @@
                                 <li class=""><a href="forms-texteditor.html">Text Editor</a></li>
                             </ul>
                         </li>
-                        <li class="">
+                        <li-- class="">
                             <a href="#charts" class="has-arrow" aria-expanded="false"><i class="lnr lnr-pie-chart"></i> <span>Estadisticas</span></a>
                             <ul aria-expanded="true">
                                 <li class=""><a href="charts-chartist.html">Chartist</a></li>
                                 <li class=""><a href="charts-sparkline.html">Sparkline Chart</a></li>
                             </ul>
-                        </li>
+                        </li-->
                     </ul>
                 </nav>
             </div>

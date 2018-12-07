@@ -33,4 +33,12 @@ class Quesero extends Authenticatable
     {
         return $this->lastname." ".$this->name;
     }
+
+    /**
+     * Get the Quesero that owns the Lote.
+     */
+    public function lote()
+    {
+        return $this->belongsTo('App\Lote');
+    }
 }

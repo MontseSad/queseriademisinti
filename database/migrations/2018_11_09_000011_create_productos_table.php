@@ -32,6 +32,7 @@ class CreateProductosTable extends Migration
      */
     public function down()
     {
+        Schema::dropIfExists('insumo_lote');
         Schema::dropIfExists('productos');
     }
 }

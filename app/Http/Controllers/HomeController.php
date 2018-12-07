@@ -47,7 +47,7 @@ class HomeController extends Controller
 
         $queso->save();
 
-        return redirect('productos')->with('info','Nuevo producto: "'.$queso->name.'" agregado');
+        return redirect('Queseros')->with('info','Nuevo quesero: "'.$queso->name.'" agregado');
     }
 
     public function queseros_list()

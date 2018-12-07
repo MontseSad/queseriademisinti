@@ -17,6 +17,15 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('password'),
         ]);
 
+        \App\Quesero::insert([
+            'name' => 'Montse',
+            'lastname' => 'Sad',
+            'birth' => '01/09/1999',
+            'curp' => 'mmmsad',
+            'email' => 'm11@sad.com',
+            'password' => bcrypt('mmmsad'),
+        ]);
+
         \App\Insumo::insert([
             'nombre' => 'Azucar',
             'unidad' => 'Kilogramos',
