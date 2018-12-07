@@ -1,4 +1,5 @@
-<div class="panel-content">
+
+ <div class="panel-content">
     <form >
         <div class="form-group">
             {!! Form::label('nombre', 'Nombre del producto') !!}
@@ -16,19 +17,19 @@
         </div>
         <div class="form-group">
             {!! Form::label('cantidad', 'Cantidad') !!}
-            {!! Form::number('cantidad', null, ['class'=> 'form-control', 'required'=>'required']) !!}
+            {!! Form::number('cantidad', null, ['class'=> 'form-control', 'required'=>'required', 'step' => '0.01']) !!}
             <!--label>Coste de venta</label>
             <input name="coste_out" type="number" class="form-control price"  required-->
         </div>
         <div class="form-group">
             {!! Form::label('precio_u', 'Precio unitario') !!}
-            {!! Form::number('precio_u', null, ['class'=> 'form-control', 'required'=>'required']) !!}
+            {!! Form::number('precio_u', null, ['class'=> 'form-control', 'required'=>'required', 'step' => '0.01']) !!}
             <!--label>Coste de venta</label>
             <input name="coste_out" type="number" class="form-control price"  required-->
         </div>
         <div class="form-group">
             {!! Form::label('precio_t', 'Precio total') !!}
-            {!! Form::number('precio_t', null, ['class'=> 'form-control', 'required'=>'required']) !!}
+            {!! Form::number('precio_t', null, ['class'=> 'form-control', 'required'=>'required', 'step' => '0.01']) !!}
             <!--label>Coste de venta</label>
             <input name="coste_out" type="number" class="form-control price"  required-->
         </div>
